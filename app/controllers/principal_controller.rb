@@ -1,4 +1,5 @@
 class PrincipalController < ApplicationController
+  skip_before_filter :verify_authenticity_token
 
   def index
   end
@@ -24,6 +25,6 @@ class PrincipalController < ApplicationController
     end
 
 
-    render json: {metadada: {total: resultadoContador}, posts: resultadoPosts, version: "v1.0"}, status: 200
+    render json: {metadada: {total: resultadoContador}, posts: resultadoPosts, version: "v1.0.1"}, status: 200
   end
 end
