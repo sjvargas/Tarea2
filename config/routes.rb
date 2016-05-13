@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'principal#index'
 
+  post '/instagram/tag/buscar', to: 'principal#instagram'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
