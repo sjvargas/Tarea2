@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 2.2
+script:
+  - bundle exec rake
+before_script: #https://docs.travis-ci.com/user/database-setup/#PostgreSQL
+  - psql -c 'create database travis_ci_test;' -U postgres
+deploy:
+  provider: heroku
+  app: whispering-bastion-95428
+  api_key:
+    secure: "d9d06b01-3bce-462e-ba7e-0cc1137536a1"
