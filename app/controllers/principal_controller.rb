@@ -19,8 +19,8 @@ class PrincipalController < ApplicationController
     rest2Parseado = JSON.parse rest2
 
     resultadoPosts=[]
-    restParseado['data'].each do |item|
-      resultadoPosts.append({ tags: item['tags'], username: item['user']['username'], likes: item['likes']['count'], url: item['images']['standard_resolution']['url'], caption: item['caption']['text']})
+    rest2Parseado['data'].each do |item|
+      resultadoPosts.append({ tags: item['tags'], username: item['user']['username'].to_s, likes: item['likes']['count'].to_i, url: item['images']['standard_resolution']['url'].to_s, caption: item['caption']['text'].to_s})
     end
 
 
