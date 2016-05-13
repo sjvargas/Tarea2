@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'coveralls', require: false
 # Gema para cliente rest
-gem 'rest-client', '~> 1.8.0'
+gem 'rest-client'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
