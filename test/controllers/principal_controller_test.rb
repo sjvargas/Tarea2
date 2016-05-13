@@ -13,7 +13,7 @@ class PrincipalControllerTest < ActionController::TestCase
   end
 
   test "con parametros" do
-  	post :instagram, tag: 'beatles'
+  	post :instagram, tag: "beatles", access_token: "2019746130.59a3f2b.86a0135240404ed5b908a14c0a2d9402"
   	assert_response 200, msg: "no se retorno estado 200 con parametros"
   end
   
