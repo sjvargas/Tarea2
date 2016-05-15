@@ -25,6 +25,6 @@ class PrincipalController < ApplicationController
     end
 
 
-    render json: {metadada: {total: resultadoContador}, posts: resultadoPosts, version: "v1.0.1"}, status: 200
+    render json: {metadata: {total: resultadoContador}, posts: resultadoPosts, version: "v1.0.2"}, status: 200
   end
 end
